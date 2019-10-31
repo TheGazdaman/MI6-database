@@ -32074,6 +32074,34 @@ function (_React$Component) {
   }
 
   _createClass(PeopleList, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.loadData();
+    }
+  }, {
+    key: "loadData",
+    value: function loadData() {
+      var _this2 = this;
+
+      if (this.url) {
+        this.setState({
+          loading: true,
+          loaded: false,
+          data: []
+        });
+        fetch(this.url).then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          _this2.setState({
+            loaded: true,
+            data: data
+          });
+        })["finally"](this.setState({
+          loading: false
+        }));
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       console.log(this.state.data);
