@@ -29,7 +29,7 @@ mix.react('resources/js/app.js', 'public/js')
         host: 'localhost',
         port: 3000,
         proxy: {
-            target: 'http://www.mi6.test:8080',
+            target: 'http://www.mi6.test',
         }
     });
  
