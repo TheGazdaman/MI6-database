@@ -11,10 +11,10 @@ class Person extends Model
     }
 
     public function image() {
-        return $this->hasOne('App\Image');
+        return $this->belongsTo('App\Image');
     }
 
     public function status() {
-        return $this->hasOne('App\Status');
+        return $this->belongsTo('App\Status');
     }
 }

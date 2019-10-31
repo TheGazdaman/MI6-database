@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../public/css/app.css';
+import '../../../sass/app.scss';
  
 export default class PeopleList extends React.Component {
     constructor(props) {
@@ -58,16 +58,14 @@ export default class PeopleList extends React.Component {
                     <div>{
                         this.state.data.map( 
                             (person) => (
-
-
-
                                 <div className="agent">
                                     <span><h3>Name: {person.name} </h3></span>
                                     <span>Nationality: {person.nationality} </span>
                                     <span>Occupation: {person.occupation} </span>
                                     <span>Status text: {person.status_text} </span>
-                                </div>
+                                    <span>Image: <img src={person.image['path']} alt={person.name}/> </span>
 
+                                </div>
                             )
                             
                         )
