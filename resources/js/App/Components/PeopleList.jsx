@@ -10,35 +10,11 @@ export default class PeopleList extends React.Component {
             loaded: false,
             data: []
         };
+    
 
         this.url = '/api/person';
     }
 
-    componentDidMount() {
-        this.loadData();
-    }
-
-    loadData() {
-        if (this.url) {
-            this.setState({ 
-                loading: true,
-                loaded: false,
-                data: []
-            })
-
-            fetch(this.url)
-                .then(response => response.json())
-                .then(data => {
-                    this.setState({ 
-                        loaded: true,
-                        data: data
-                    })
-                })
-                .finally(this.setState({
-                    loading: false
-                }));
-        }
-    }
 
 
     render() {
