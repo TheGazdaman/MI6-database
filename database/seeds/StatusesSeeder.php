@@ -20,7 +20,7 @@ class StatusesSeeder extends Seeder
                 ['name' => 'In Custody'],
                 ['name' => 'Incarcerated'],
                 ['name' => 'Retired'],
-                ['name' => 'Unkown']
+                ['name' => 'Unknown']
             ]
         );
     }
