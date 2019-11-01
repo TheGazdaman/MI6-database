@@ -42,7 +42,8 @@ export default class App extends React.Component {
         else if (this.state.logged_in === true)
         {
             content = (
-                <PeopleList />
+                <PeopleList token={ this.state.token }
+                />
             )
         }
         else {
@@ -53,7 +54,7 @@ export default class App extends React.Component {
                     <h1>Login form</h1>
                     <LoginForm 
                         success = {this.props.onLoginSuccess}
-                    
+                        token={ this.state.token }
                     />
 
 

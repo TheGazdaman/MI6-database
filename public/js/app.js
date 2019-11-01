@@ -32040,10 +32040,13 @@ function (_React$Component) {
           className: "loader"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)), "Loading");
       } else if (this.state.logged_in === true) {
-        content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PeopleList_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+        content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PeopleList_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          token: this.state.token
+        });
       } else {
         content = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Login form"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginForm_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          success: this.props.onLoginSuccess
+          success: this.props.onLoginSuccess,
+          token: this.state.token
         }));
       }
 
@@ -32330,8 +32333,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\webDevelopment\Bootcamp\laravel-mi6-asset-db\mi6-database\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\webDevelopment\Bootcamp\laravel-mi6-asset-db\mi6-database\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/michalgazdik/web/bootcamp/mi6-database/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/michalgazdik/web/bootcamp/mi6-database/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
